@@ -1,8 +1,67 @@
 #root {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+}
+:root {
+  --beige: #F9F4EB;
+  --grage:#F0ECE5;
+  --orange:#FCDCA6;
+  --rose:#FFD2F3;
+  --violet:#E5DAF6;
+  --jaune:#FFE32E;
+  --noir:#000000;
+  --blanc:#ffffff;
+
+  --fontTitre:"Archivo Narrow", sans-serif;
+  --fontTexte:"Inter", sans-serif;
+  --fontCode:"IBM Plex Mono", monospace;
+}
+
+body{
+  background-color: var(--beige);
+}
+
+h1{
+  font-family: var(--fontTitre);
+  color: var(--noir);
+  font-size: 100px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+h2{
+  font-family: var(--fontTitre);
+  color: var(--noir);
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+h3{
+  font-family: var(--fontTexte);
+  color: var(--noir);
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+h3.span{
+  font-weight:700;
+}
+p{
+  font-family: var(--fontTexte);
+  color:var(--noir);
+  font-size: 16px;
+  font-weight: 400;
+}
+a{
+  font-family: var(--fontCode);
+  color: var(--noir);
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+a.dark,h1.dark,h2.dark,h3.dark,p.dark{
+
+  color: var(--beige);
 }
 
 .logo {
