@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './menu.css'
 import puceBlanc from '../assets/puceBlanc.svg'
+import { Link } from "react-router-dom";
 
 function Menu() {
 
@@ -8,15 +9,15 @@ function Menu() {
     <>
       <div id='topMenu' className="menuWrap padding">
         <div className="logoMenu">
-            <li><a className="dark" href="">Elizabeth <img src={puceBlanc} alt="puce Blanc" /> Brault</a></li>
+            <li><Link to="/" className="dark">Elizabeth <img src={puceBlanc} alt="puce Blanc" /> Brault</Link></li>
         </div>
         <div className="nav">
             <nav>
                 <ul>
-                    <li><a href="">Qui suis-je?</a></li>
-                    <li><a href="">Mon Expertise</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Me contacter</a></li>
+                    <li> <Link to="/apropos">Qui suis-je?</Link></li>
+                    <li><Link to="">Mon Expertise</Link></li>
+                    <li><Link to="/portfolio">Réalisations</Link></li>
+                    <li><Link to="/contact">Me contacter</Link></li>
 
                 </ul>
             </nav>
