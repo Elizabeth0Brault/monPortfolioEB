@@ -1,0 +1,58 @@
+.menuWrap{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;;
+
+}
+
+.logoMenu{
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.nav > nav>ul>li{
+    background-color: var(--grage);
+    padding: 0.6em;
+    border-radius: 0.2em;
+}
+
+.logoMenu>li{
+    background-color: var(--noir);
+    padding: 0.6em;
+    border-radius: 0.2em;
+    list-style: none;
+}
+
+.logoMenu>li:hover img {
+  filter: brightness(0) saturate(100%) invert(92%) sepia(74%) saturate(2100%) hue-rotate(350deg) brightness(100%) contrast(95%);
+
+}
+
+.nav > nav>ul>li:hover{
+    background-color: var(--noir);
+    border-radius: 50px;
+}
+
+/* Decoration Menu */
+.decoWrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2em;;
+    gap: 1em;
+}
+
+p.upper{
+    font-family: var(--fontTitre);
+    color: var(--noir);
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.puce1, .puce2{
+    display: flex;
+    gap: 1em;
+}

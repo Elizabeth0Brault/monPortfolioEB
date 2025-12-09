@@ -1,0 +1,50 @@
+.BTN{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+div.txt1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.txt1 >p{
+    font-family: var(--fontTitre);
+    color: var(--beige)!important;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.BTN > li{
+    background-color: var(--beige);
+    padding: 0.6em;
+    border-radius: 0.2em;
+}
+
+.txt1,
+.BTN > li {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  
+}
+
+/* AU HOVER SUR .BTN : anim des deux éléments */
+.BTN:hover .txt1 {
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+.BTN:hover li {
+  transform: translateX(-50%);
+  background-color: var(--jaune);
+}
+
+.BTN:hover a {
+  color: var(--noir);
+}

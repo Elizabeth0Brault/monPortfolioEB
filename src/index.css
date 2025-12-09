@@ -1,68 +1,86 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --beige: #F9F4EB;
+  --grage:#F0ECE5;
+  --orange:#FCDCA6;
+  --rose:#FFD2F3;
+  --violet:#E5DAF6;
+  --jaune:#FFE32E;
+  --noir:#000000;
+  --blanc:#ffffff;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --fontTitre:"Archivo Narrow", sans-serif;
+  --fontTexte:"Inter", sans-serif;
+  --fontCode:"IBM Plex Mono", monospace;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
+body{
+  background-color: var(--beige);
+  margin: 0px;
   min-width: 320px;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1{
+  font-family: var(--fontTitre);
+  color: var(--noir);
+  font-size: 100px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+h2{
+  font-family: var(--fontTitre);
+  color: var(--noir);
+  font-size: 60px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+h3{
+  font-family: var(--fontTexte);
+  color: var(--noir);
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+h3.span{
+  font-weight:700;
+}
+p{
+  font-family: var(--fontTexte);
+  color:var(--noir);
+  font-size: 16px;
+  font-weight: 400;
+}
+a{
+  font-family: var(--fontCode);
+  color: var(--noir);
+  font-size: 16px;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  text-transform: uppercase;
+  text-decoration: none;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+a.dark, h1.dark, h2.dark, h3.dark,p.dark{
+
+  color: var(--beige)!important;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+a:hover{
+  color: var(--beige);
+}
+a.dark:hover{
+
+  color: var(--jaune)!important;
+}
+
+ul{
+  display:flex;
+  align-items: flex-end;
+  gap:20px;
+  list-style: none;
+  margin: 0;
+}
+li{
+  text-decoration: none;
+}
+.padding{
+  padding: 0px 80px;
 }

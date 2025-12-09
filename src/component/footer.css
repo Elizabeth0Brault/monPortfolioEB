@@ -1,0 +1,121 @@
+.footer {
+    background-color: var(--noir);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+}
+.cta{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+}
+.cta > h2{
+    
+    color: var(--beige)!important;
+     width: fit-content;
+     text-align: left!important;
+     margin-bottom:40px;
+     margin-top: 0px;
+}
+p.ctaFoot{
+    font-family: var(--fontTitre);
+    color: var(--beige)!important;
+    font-size:24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+div.flexCta
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: fit-content;
+}
+
+.separateurLight {
+  margin-top: 90px;
+  margin-bottom: 90px;  
+  width: 100%;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+
+  border-image-source: repeating-linear-gradient(
+    to right,
+    var(--grage) 0 3px,   /* longueur du point */
+    transparent 3px 40px /* espace entre les points */
+  );
+  border-image-slice: 1;
+}
+
+/* Footer Info */
+.infoFoot{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+.logoFoot>li{
+    background-color: var(--jaune);
+    padding: 0.6em;
+    border-radius: 0.2em;
+    list-style: none;
+}
+
+.logoFoot>li:hover{
+    background-color: var(--beige);
+}
+
+.logoFoot>li:hover a{
+    color: var(--noir);
+}
+
+.logoFoot>li:hover img {
+  filter: none;
+
+}
+.menuFoot> ul, .contactFoot> ul{
+    display: block;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuFoot> ul>li, .contactFoot> ul>li{
+    margin-bottom: 1em;;
+}
+.menuFoot> ul>li>a, .contactFoot> ul>li>a{
+    color: var(--beige);
+}
+.menuFoot> ul>li>a:hover, .contactFoot> ul>li>a:hover{
+    color: var(--jaune);
+}
+
+/*copyright*/
+
+.copyright{
+    margin-top: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.copyright>p{
+    font-family: var(--fontTitre);
+    color: var(--beige);
+    font-size: 12px;
+    text-transform: uppercase;;
+}
+
+.puce2:hover img {
+  filter: brightness(0) saturate(100%) invert(92%) sepia(74%) saturate(2100%) hue-rotate(350deg) brightness(100%) contrast(95%);
+
+}
