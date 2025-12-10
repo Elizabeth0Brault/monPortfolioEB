@@ -22,10 +22,23 @@ div.txt1{
     margin: 0;
 }
 
+.txt1 >p.Dark{
+    color: var(--noir)!important;
+}
+
 .BTN > li{
     background-color: var(--beige);
     padding: 0.6em;
     border-radius: 0.2em;
+    list-style: none;;
+}
+
+.BTN > li.Dark{
+    background-color: var(--noir);
+}
+
+a.Dark{
+    color: var(--beige);
 }
 
 .txt1,
