@@ -1,4 +1,6 @@
 .menuWrap{
+    width: 100%;
+    max-width: 1400px;
     display: flex;
     justify-content: space-between;
     margin-top: 40px;;
@@ -36,6 +38,8 @@
 
 /* Decoration Menu */
 .decoWrap{
+    width: 100%;
+    max-width: 1400px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,9 +47,19 @@
     gap: 1em;
 }
 
+/* Version par défaut (noir) — déjà existante */
+.decoWrap.dark .upper {
+  color: var(--noir);
+}
+
+/* Version blanche UNIQUEMENT pour la page réalisation */
+.decoWrap.white .upper {
+  color: var(--beige);
+}
+
+
 p.upper{
     font-family: var(--fontTitre);
-    color: var(--noir);
     font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;

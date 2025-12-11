@@ -1,42 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { useState, useEffect } from 'react'
 import Menu from './component/menu.jsx'
 import Footer from './component/footer.jsx'
 import Decoration from './component/decorationMenu.jsx'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './PagePorfolio.css'
+import Plume from "./assets/plumIconColor.svg";
+import Art from "./assets/artIconColor.svg";
+import Code from "./assets/codeIconColor.svg";
+import Card from "./assets/card.svg";
 
-function App() {
-  const [count, setCount] = useState(0)
+
+function Realisation() {
+  useEffect(() => {
+    document.body.classList.add("realisation-dark");
+
+    return () => {
+      document.body.classList.remove("realisation-dark");
+    };
+  }, []);
 
 
   return (
     <>
     <Menu/>
-    <Decoration txt01="Design" txt02="Code"/>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Decoration txt01="Mes" txt02="Réalisations" variant="white" />
+
+    <div className="headerDark">
+      <h1>Mes projets en <br /> un coup d’œil</h1>
+      <img src={Card} alt="card" />
+      <p className="intro">Découvrez mes projets alliant design, programmation et création visuelle. Chaque pièce reflète mon approche multidisciplinaire et mon souci du détail.</p>
+      <div className="icon">
+        <img src={Plume} alt="Plume" />
+        <img src={Code} alt="Code" />
+        <img src={Art} alt="art" />
+
       </div>
-      <h1>Mes projets en un coup d’œil</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more BONJOUR
-      </p>
+    </div>
+      
+      
       <Footer/>
     </>
   )
 }
 
-export default App
+export default Realisation

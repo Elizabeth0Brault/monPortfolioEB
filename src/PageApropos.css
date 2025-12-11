@@ -1,0 +1,165 @@
+.apropos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.col1propos{
+    width:75%;
+}
+.col2propos{
+    width:25%
+}
+.titrePropos {
+  display: inline-flex;      /* ou block si tu veux toute la largeur */
+  flex-direction: column;
+  gap: 0.2em;
+  line-height: 1em;                /* espace entre les deux lignes */
+}
+
+.titrePropos .line2 {
+  display: inline-flex;
+  align-items: center;       /* centre verticalement l’image et "sur moi" */
+  gap: 10px;                 /* espace entre l’image et le texte */
+}
+
+.titrePropos img {
+  display: block;
+  height: 1em;               /* adapte à la taille du texte */
+  width: auto;
+}
+
+.col2propos > p{
+    position: relative;
+    font-family: var(--fontCode);
+
+}
+
+.col2propos > p > span{
+    font-weight: bold;
+    padding-bottom: 16px;
+
+}
+
+.col2propos > p::before{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top:-80px;
+    left:-80px;
+    background-color: var(--orange);
+    z-index: -10;
+
+}
+
+/*Parcous*/
+.parcours{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.parcours > h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.rowParcours{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/*Approche*/
+.approche{
+    margin-top: 90px;
+}
+.rowApproche{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.col2approche > h3{
+    margin-top: 0px;
+    font-weight: bold;
+    
+}
+.col1approche {
+    width: 40%;
+}
+.col2approche {
+    width: 60%;
+}
+
+.flex3{
+     display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.col{
+    width: 33.33%;
+}
+.col > h4{
+    position: relative;
+}
+h4.rose::before, h4.orange::before, h4.violet::before {
+    position:absolute;
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    bottom:-5px;
+    border-radius: 5px;
+    
+    margin-bottom: 10px;
+    z-index: -1;
+}
+
+ h4.rose::before{
+    background-color: var(--rose);
+}
+ h4.orange::before{
+    background-color: var(--orange);
+}
+ h4.violet::before{
+    background-color: var(--violet);
+}
+
+.mention > p{
+    margin-top: 40px;
+    display: flex;
+    align-items: start;
+    gap:40px;
+    font-family: var(--fontCode);
+}
+
+.mention>p>span{
+    font-weight: bold;
+}
+/*ce que j'aime*/
+.aime{
+    margin-top: 90px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 90px;
+}
+
+.left{
+    justify-content: flex-start;
+}
+
+.aimetxt>p{
+    text-transform: uppercase;
+    line-height: 1.8em;
+    font-size: 24px;
+    margin-bottom: 40px;
+}

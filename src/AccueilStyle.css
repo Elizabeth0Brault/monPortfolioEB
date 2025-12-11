@@ -1,6 +1,7 @@
 /*sectionHeader*/
 .header{
-    margin-bottom: 90px;;
+    margin-bottom: 90px;
+    max-width: 1400px;
 }
 .header > .row1{
 display: flex;
@@ -70,10 +71,23 @@ p.intro{
 
 /*section competence*/
 .competence{
+  position:relative;
     padding-top: 90px;
     padding-bottom: 90px;
     margin-bottom: 90px;
     background-color: var(--noir);
+    max-width: 1400px;
+}
+
+.competence::before {
+    content: "";
+  position: absolute;
+  inset: 0;               /* top:0; right:0; bottom:0; left:0; */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;           /* plein écran */
+  background-color: var(--noir);
+  z-index: -1;  
 }
 
 .light > h2, .light > h3, .light > p {
@@ -88,6 +102,7 @@ p.intro{
 }
 
 .ux, .code, .design{
+  position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -107,7 +122,9 @@ p.intro{
     content: "";
     position: absolute;
     display: block;
-    left: 0;
+    /* bord gauche de l'écran : */
+    left: calc(50% - 50vw);
+
     width: 50px;
     height: 10em;
     opacity: 0;
@@ -138,5 +155,63 @@ p.intro{
 .competence.is-visible .ux::before,
 .competence.is-visible .code::before,
 .competence.is-visible .design::before {
+
+
   animation: appearBar 0.8s ease forwards;
+}
+
+/*sectionTemoin*/
+.temoin{
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 90px;
+}
+.temoin::after{
+  content: "";
+  position: absolute;
+  top: -90px;
+  transform: translateY(-50%); /* centre verticalement */
+  right: 40px; /* place la flèche à droite du bouton */
+  width: 200px;
+  height: 100%;
+  background-image: url("/src/assets/asterix.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: rotateLoop 12s linear infinite;
+}
+
+@keyframes rotateLoop {
+  from { transform: translateY(-50%) rotate(0deg); }
+  to   { transform: translateY(-50%) rotate(360deg); }
+}
+
+/*PROJETS*/
+
+.separateurDark {
+  margin-top: 90px;
+  margin-bottom: 90px;
+
+  max-width: 1400px;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+
+  border-image-source: repeating-linear-gradient(
+    to right,
+    var(--noir) 0 3px,   /* longueur du point */
+    transparent 3px 40px /* espace entre les points */
+  );
+  border-image-slice: 1;
+}
+
+.projet{
+  max-width: 1400px;
+    margin-bottom: 90px;
+}
+.projet> h2{
+    margin-bottom: 0px;
 }

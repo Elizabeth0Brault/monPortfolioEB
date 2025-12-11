@@ -1,0 +1,103 @@
+.sliderTemoin-inner{
+    max-width: 980px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 40px;
+}
+.sliderTemoin-inner > img{
+    width: 8%
+}
+.sliderTemoin-inner > p{
+    width: 62%;
+    font-family: var(--fontTitre);
+    font-size: 24px;
+    text-align: left;
+}
+.sliderTemoin-content{
+    width: 30%;
+    text-align: left;
+}
+
+.sliderTemoin-content>p{
+    font-family: var(--fontTexte);
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.sliderTemoin-content>p>span{
+    font-weight: bold;
+}
+.sliderTemoin-nav{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btnSecondaire{
+    background-color:var(--noir);
+    border: 2px solid var(--colorTexte);
+    border-radius: 5px;
+    color: var(--beige);
+    padding: 6px 20px;
+    font-family: var(--fontCode);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnSecondaire:hover{
+    background-color: var(--jaune);
+    color: var(--noir);
+    border-color: var(--noir);
+}
+.next, .prev{
+    position: relative;
+}
+
+.next::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* centre verticalement */
+  right: -75px; /* place la flèche à droite du bouton */
+  width: 50px;
+  height: 100%;
+  background-image: url("/src/assets/flecheDark.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.prev::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg); /* centre verticalement */
+left: -75px; /* place la flèche à droite du bouton */
+  width: 50px;
+  height: 100%;
+  background-image: url("/src/assets/flecheDark.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sliderTemoin-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.guillemet {
+  animation: floatQuotes 2.2s ease-in-out infinite;
+  display: inline-block; /* important pour que transform fonctionne */
+}
+
+@keyframes floatQuotes {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}

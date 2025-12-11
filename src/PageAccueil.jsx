@@ -7,6 +7,7 @@ import "./AccueilStyle.css";
 import Bouton from "./component/btnDark.jsx";
 import BoutonBlanc from "./component/btnLight.jsx";
 import puceNoir from './assets/puceNoire.svg'
+import asterix from './assets/asterix.svg'
 
 import Plume from "./assets/plumIconColor.svg";
 import Code from "./assets/codeIconColor.svg";
@@ -84,7 +85,7 @@ function Accueil() {
       <Menu />
       <Decoration txt01="Design" txt02="Code" />
 
-      <section className="header padding">
+      <section className="header ">
         <h1>INTéGRATRICE MuLTIMÉDIA</h1>
 
         <div className="row1">
@@ -142,7 +143,8 @@ function Accueil() {
                     <img src={puceNoir} alt="puce Noir" />
                 </div>
       </section>
-      <section className="competence padding">
+      <section className="competence ">
+        <div className="competenceInner">
         <div className="rowCompetence light">
           <h2>Mes compétences</h2>
           <BoutonBlanc txt01="Curriculum Vitae" txt02=" vOIR mon PACOURS PROFESSIONNELLE" />
@@ -159,7 +161,20 @@ function Accueil() {
           <h3>Création Visuelle & Production</h3>
           <p>Design graphique •  Conception imprimée (petit et grand format) • Préparation de fichiers pour impression (CMJN, bleed, normes) •  Photographie (sport, portrait, storytelling visuel) • Vidéo, montage & colorimétrie • Motion design & animation • Retouche avancée (Photoshop, Lightroom)</p>
         </div>
+        </div>
       </section>
+
+      <div className="temoin ">
+        <h2>Histoires de collaboration</h2>
+        <Slider />
+      </div>
+      <div className="projet ">
+        <div className="separateurDark"></div>
+        <h2>Un regard éclaire sur mon travail</h2>
+        <p>Découvrez une sélection de projets alliant design, programmation et création visuelle. Chaque réalisation reflète ma capacité à concevoir des interfaces intuitives, à développer des fonctionnalités interactives et à produire des visuels cohérents et impactants.</p>
+        PROJET À VENIR
+      <Bouton txt01="Réalisations" txt02="Voir toutes les créations" />
+      </div>
 
       <Footer />
     </>
