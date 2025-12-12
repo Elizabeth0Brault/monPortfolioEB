@@ -20,3 +20,93 @@
     width: 24px;
     padding: 6px;
 }
+
+h3.dark{
+    color: var(--beige);
+}
+
+/*filtre*/
+ ul.fake-options{
+    display: block!important;
+    padding: 0px;
+    margin-top: 20px;
+}
+
+.fake-options > li{
+    color: var(--beige);
+    font-family: var(--fontCode);
+    margin-bottom: 12px;
+}
+.fake-options > li:hover{
+    color: var(--jaune);
+    
+}
+.filter-select-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;  /* ⬅ Maintenant le label et le select s'alignent à GAUCHE */
+}
+
+
+
+.filter-all {
+     padding: 12px;
+    background-color: transparent;
+    color: var(--beige);
+    border:1px solid var(--beige);
+    border-radius: 10px;
+    font-family: var(--fontCode);
+    text-transform: uppercase;
+    margin-top: 20px;
+   
+    
+}
+
+.fake-select {
+   
+    padding: 12px;
+    background-color: transparent;
+    color: var(--beige);
+    border:1px solid var(--beige);
+    border-radius: 10px;
+    font-family: var(--fontCode);
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+ /*Section projet wrap*/
+ .sectionProjet{
+    display: flex;
+    width: 100%;
+     gap :40px;
+ }
+
+ .lesProjets{
+display: grid;
+  width: 75%;           
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 40px;      
+  row-gap: 40px;         
+ }
+
+ .blockProjet> a {
+  display: block; 
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+ }
+
+ .blockProjet > img{
+    width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+ }
+
+ .blockProjet h3 {
+  display: block;   
+  width: 100%;
+  margin: 12px 0 0;   
+  color: var(--beige); 
+  word-wrap: break-word; 
+}
