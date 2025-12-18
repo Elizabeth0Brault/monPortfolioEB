@@ -1,0 +1,10 @@
+<svg id="card" xmlns="http://www.w3.org/2000/svg" width="157.859" height="198.042" viewBox="0 0 157.859 198.042">
+  <g id="_157682-008-BUR04-1200x800" data-name="157682-008-BUR04-1200x800" transform="translate(6.732) rotate(2)" fill="#f9f4eb" stroke="#8a8a8a" stroke-width="1">
+    <rect width="151.22" height="192.882" rx="10" stroke="none"/>
+    <rect x="0.5" y="0.5" width="150.22" height="191.882" rx="9.5" fill="none"/>
+  </g>
+  <text id="design" transform="matrix(0.999, 0.035, -0.035, 0.999, 79.299, 46.308)" font-size="22" font-family="ArchivoNarrow-SemiBold, Archivo Narrow" font-weight="600"><tspan x="-34.584" y="0">DESIGN</tspan></text>
+  <text id="code" transform="matrix(0.999, 0.035, -0.035, 0.999, 78.566, 67.296)" font-size="23" font-family="ArchivoNarrow-SemiBold, Archivo Narrow" font-weight="600"><tspan x="-27.244" y="0">CODE</tspan></text>
+  <text id="_20" data-name="20" transform="matrix(0.999, 0.035, -0.035, 0.999, 76.682, 121.263)" font-size="56" font-family="ArchivoNarrow-Bold, Archivo Narrow" font-weight="700"><tspan x="-25.536" y="0">20</tspan></text>
+  <text id="_25" data-name="25" transform="matrix(0.999, 0.035, -0.035, 0.999, 75.006, 169.233)" font-size="56" font-family="ArchivoNarrow-Bold, Archivo Narrow" font-weight="700"><tspan x="-25.536" y="0">25</tspan></text>
+</svg>

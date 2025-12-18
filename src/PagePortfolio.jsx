@@ -9,6 +9,7 @@ import Code from "./assets/codeIconColor.svg";
 import Card from "./assets/card.svg";
 import { projects } from './Data/dataProjet.js';
 import { Link } from "react-router-dom";
+import ProjetCard from "./component/ProjetCard";
 
 
 
@@ -120,15 +121,10 @@ function Realisation() {
 
       {/* 🔽 LISTE DES PROJETS FILTRÉS */}
       <div className="lesProjets">
-            {filteredProjects.map((projet) => (
-        <div key={projet.id} className="blockProjet">
-          <Link to={`/projets/${projet.slug}`}>
-            <img src={projet.cover} alt={projet.titre} />
-            <h3 className="dark">{projet.titre}</h3>
-          </Link>
-        </div>
-      ))}
-      </div>
+  {filteredProjects.map((projet) => (
+    <ProjetCard key={projet.id} projet={projet} variant="dark" />
+  ))}
+</div>
     </div>
 
       <Footer />

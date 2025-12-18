@@ -1,0 +1,90 @@
+ .sectionProjet{
+    display: flex;
+    width: 100%;
+     gap :40px;
+     margin-top: 90px;
+     margin-bottom: 90px;
+ }
+
+ .lesProjets{
+display: grid;
+  width: 75%;           
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 40px;      
+  row-gap: 40px;
+        
+ }
+
+ .blockProjet> a {
+  display: block; 
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  position: relative;
+ }
+
+ .blockProjet img {
+  width: 100%;        /* l'image ne dépassera jamais */
+  height: 150px;       /* garde les proportions */
+  display: block;     /* retire l'espace blanc sous les images inline */
+  object-fit: cover;  /* optionnel, mais garde un rendu propre */
+  max-width: 100%;    /* ceinture + bretelles */
+  border-radius: 5px;
+  
+}
+.blockProjet a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+    background: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+ 
+}
+.blockProjet:hover a::before {
+  opacity: 1;
+}
+
+.blockProjet > a::after {
+  content: "";
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  width: 20px;             /* taille de la flèche */
+  height: 20px;
+  background-image: url("/src/assets/iconeDetails.svg"); /* ton icône */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.4);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Apparition au hover */
+.blockProjet:hover > a::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+ .blockProjet h3 {
+  display: block;   
+  width: 100%;
+  margin: 12px 0 0;   
+  color: var(--beige); 
+  word-wrap: break-word; 
+  font-size: 18px;
+ 
+}
+ .blockProjet:hover h3 {
+  color: var(--jaune)!important;
+  
+}
+
